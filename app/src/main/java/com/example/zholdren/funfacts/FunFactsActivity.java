@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class FunFactsActivity extends Activity {
 
+    public static final String TAG = FunFactsActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,7 @@ public class FunFactsActivity extends Activity {
         };
         showFactButton.setOnClickListener(listener);
 
-        Toast.makeText(this, "Yay!  Our Activity was created!", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "Yay!  Our Activity was created!", Toast.LENGTH_LONG).show();
+        Log.d(TAG, "We are logging from the onCreate() method!");
     }
 }
